@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
+        <title>Pomodoro Timer</title>
+        <audio id="clickAudio" src="assets/audio/click.mp3"></audio>
+        <audio id="timerAudio" src="assets/audio/10seconds.mp3"></audio>
+        <audio id="pauseAudio" src="assets/audio/pause.mp3"></audio>
+        <audio id="resetAudio" src="assets/audio/reset.mp3"></audio>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Pomodoro Timer</h1>
+            <h2>Get more productive with our app!</h2>
+        </div>
+        <div id="container">
+
+            <p id="work" class="label">Work Timer</p>
+            <p id="break" class="label">Break Timer</p>
+            <p id="cycles" class="label">Cycles</p>
+            
+
+            <div id="work-timer" class="timer">
+                <p id="w_minutes">25</p>
+                <p class="semicolon">:</p>
+                <p id="w_seconds">00</p>
+            </div>
+            <p id="counter" class="timer">0</p>
+            <div id="break-timer" class="timer">
+                <p id="b_minutes">5</p>
+                <p class="semicolon">:</p>
+                <p id="b_seconds">00</p>
+            </div>
+
+            <button id="start" class="btn" onclick="document.getElementById('clickAudio').play()">Start</button>
+            <button id="stop" class="btn" onclick="document.getElementById('pauseAudio').play()">Pause</button>
+            <button id="reset" class="btn" onclick="document.getElementById('resetAudio').play()">Reset</button>
+
+        </div>
+        <div class="footer">
+            <button id="help">?</button>
+        </div>
+        <script src="assets/js/script.js">
+        </script>
+    </body>
+</html>
